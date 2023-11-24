@@ -1,0 +1,88 @@
+@import 'styles/variables';
+
+.AcceptInviteWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(#FFFFFF90, #FFFFFF), url(../../assets/images/backgrounds/login.jpg);
+    background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-color: #FFFFFF;
+    overflow: hidden auto;
+
+    .AcceptInviteLogo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 150px;
+        margin-left: 10%;
+        font-size: 35px;
+    }
+
+    .AcceptInviteContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: calc(100% - 150px);
+        width: 100%;
+        margin-left: 10%;
+
+        .AcceptInviteWelcome {
+            font-size: $xl;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        .AcceptInviteSubtitle {
+            font-size: $m;
+            color: #333333;
+        }
+
+        .AcceptInviteLogin {
+            font-size: $m;
+            margin-top: 5px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .isLink {
+            cursor: pointer;
+
+            &:hover {
+                color: $primaryColor;
+            }
+        }
+
+        .AcceptInviteButton {
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        form {
+            margin-top: 20px;
+            width: 350px;
+
+            em {
+                color: $primaryColor;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.__isMobile {
+        padding: 0 20px;
+        .AcceptInviteLogo {
+            margin-left: 0;
+        }
+
+        .AcceptInviteLogo, .AcceptInviteContent {
+            margin-left: 0;
+        }
+
+        form {
+            width: 100%;
+        }
+    }
+}

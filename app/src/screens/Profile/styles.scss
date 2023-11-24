@@ -1,0 +1,186 @@
+@import 'styles/variables';
+
+.ProfileContent {
+    display: flex;
+    min-height: calc(100vh - 312px);
+    padding: 25px;
+    justify-content: center;
+
+    .ProfileContentWrapper {
+        width: 100%;
+
+        @media screen and (min-width: 1600px) {
+            width: 1600px;
+        }
+    }
+}
+
+.ProfileImageContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+
+    &:hover {
+        .ProfileImageOverlay {
+            opacity: 1;
+        }
+    }
+
+    @media screen and (max-width: 992px) {
+        justify-content: center;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center center;
+        user-select: none;
+        box-shadow: 1px 0px 10px 0 #00000010, 0px 1px 10px 0 #00000010, -1px 0px 10px 0 #00000010, 0px -1px 10px 0 #00000010;
+
+        @media screen and (max-width: 992px) {
+            justify-content: center;
+            max-width: 300px;
+        }
+    }
+
+    .ProfileImageOverlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-color: #00000080;
+        opacity: 0;
+        transition: 0.2s;
+
+        .ProfileImageAction {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: 100%;
+            cursor: pointer;
+            transition: 0.2s;
+
+            .ProfileImageActionIcon {
+                font-size: $xl;
+            }
+
+            &:hover:not(:active) {
+                background-color: #00000060;
+
+                .ProfileImageActionIcon {
+                    color: $secondaryColor;
+                }
+            }
+
+            &:active {
+                background-color: #00000090;
+
+                .ProfileImageActionIcon {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+}
+
+.ProfileGeneralInfo {
+    margin: 0 0 20px;
+
+    .ProfileSectionTitle {
+        display: flex;
+        align-items: center;
+        font-size: $xl;
+        font-weight: bolder;
+        margin-bottom: 20px;
+        color: #535353;
+
+        .ProfileSectionIcon {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    }
+
+    .ProfileInfoValue {
+        font-weight: lighter;
+    }
+}
+
+.ProfileInputClass {
+    width: 100%;
+    color: $primaryColor;
+    font-size: $s;
+    margin-bottom: 20px !important;
+
+    &.__noMargin {
+        margin-bottom: 10px !important;
+    }
+    
+    input {
+        font-size: $m !important;
+        
+        /* Chrome, Safari, Edge, Opera */
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Firefox */
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        &:focus, &:active, &:hover {
+            border: none !important;
+            outline: none !important;
+        }
+    }
+}
+
+.ProfileDeletePicture {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+
+    span {
+        font-size: $m;
+    }
+}
+
+.ProfileButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ProfileButtonClass {
+    height: 40px;
+    border-radius: 4px;
+    width: 140px;
+    text-align: center;
+    border: 1px solid #17445f;
+    margin-top: 10px;
+    background-color: #17445f;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: #2b556b;
+    }
+
+    &:active {
+        background: #0b2538;
+        border-color: #0b2538;
+        box-shadow: none;
+    }
+
+    &:disabled {
+        background-color: $buttonDisabledBackgroundColor;
+        border: 1px solid $buttonDisabledBackgroundColor;
+        cursor: not-allowed;
+    }
+}

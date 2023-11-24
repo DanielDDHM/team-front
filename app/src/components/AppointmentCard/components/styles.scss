@@ -1,0 +1,266 @@
+@import "styles/variables";
+
+.SimpleAppointmentCardWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border-radius: 20px;
+    background-color: #3277a3;
+    padding: 10px 0;
+
+    .AppointmentType {
+        padding: 10px 0;
+        margin: 0 30px 10px;
+        border-bottom: 1px solid #d9ddde4d;
+
+        p {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    .AppointmentDetailsWrapper {
+        display: flex;
+        width: 100%;
+
+        .AppointmentVideoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: inherit;
+
+            .VideoIconWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .AppointmentDetails {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 15px;
+            padding: 10px 30px;
+
+            .PsychologistDetails {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 2px;
+
+                > p {
+                    margin: 0;
+                    color: #fff;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .CardRow {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .CardRowIconWrapper {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        p {
+                            margin: 0;
+                            color: #fff;
+                        }
+
+                        &.--card-empty {
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+
+            .PsychologistAvatar {
+                height: 50px;
+                min-height: 50px;
+                width: 50px;
+                min-width: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &.--card-simple {
+        background-color: #fff;
+        width: 100%;
+
+        * {
+            color: $darkPrimaryColor !important;
+        }
+    }
+}
+
+.AppointmentCardWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border-radius: 20px;
+    background-color: #f4f5f6;
+    padding: 10px 0;
+
+    .AppointmentType {
+        padding: 10px 0;
+        margin: 0 30px 10px;
+        border-bottom: 1px solid #d9ddde4d;
+
+        p {
+            color: $darkPrimaryColor;
+            font-size: 22px;
+            font-weight: 700;
+            margin: 0;
+        }
+    }
+
+    .AppointmentDetailsWrapper {
+        display: flex;
+        width: 100%;
+
+        .AppointmentVideoContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80px;
+            height: inherit;
+
+            .VideoIconWrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: #fff;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .AppointmentDetails {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            gap: 15px;
+            padding: 10px 20px;
+
+            .PsychologistDetails {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                gap: 2px;
+
+                > p {
+                    margin: 0;
+                    color: $darkPrimaryColor;
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+
+                .CardRow {
+                    display: flex;
+                    width: 100%;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .CardRowIconWrapper {
+                        display: flex;
+                        align-items: center;
+                        gap: 5px;
+
+                        p {
+                            margin: 0;
+                            color: $darkPrimaryColor;
+                        }
+
+                        &.--card-empty {
+                            gap: 5px;
+                        }
+                    }
+                }
+            }
+
+            .PsychologistAvatar {
+                height: 50px;
+                min-height: 50px;
+                width: 50px;
+                min-width: 50px;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &.--card-simple {
+        background-color: #fff;
+        width: 100%;
+
+        * {
+            color: $darkPrimaryColor !important;
+        }
+    }
+
+	.AppointmentOptions {
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		margin: 0 20px;
+		padding: 15px 0 5px;
+		border-top: 0.5px solid #D9DDDE;
+
+		.AppointmentOption {
+			width: 50%;
+			height: 30px;
+			border-radius: 30px;
+			border: none;
+			background-color: #D9DDDE;
+			color: $darkPrimaryColor;
+			text-align: center;
+			transition: 300ms ease-in-out;
+			cursor: pointer;
+
+			&.--primary {
+				background-color: $primaryColor;
+				color: #fff;
+			}
+
+			&:hover {
+				background-color: lighten(#D9DDDE, 5%);
+				
+				&.--primary {
+					background-color: lighten($primaryColor, 10%);
+				}
+			}
+		}
+	}
+}
+

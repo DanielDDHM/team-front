@@ -1,0 +1,14 @@
+export { default as Header } from './Header';
+export { default as ErrorBoundary } from './ErrorBoundary';
+export { default as Login } from './Login';
+export { default as RecoverPassword } from './RecoverPassword';
+export { default as Error500 } from './Error500';
+export { default as Home } from './Home';
+export { default as Sidebar } from './Sidebar';
+export { default as Footer } from './Footer';
+export { default as Register } from './Register';
+export { default as Profile } from './Profile';
+export { default as Appointments } from './Appointments';
+export { default as Chat } from './Chat';
+export { default as ConfirmAccount } from './ConfirmAccount';
+export { default as DefinePassword } from './DefinePassword';

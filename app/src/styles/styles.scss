@@ -1,0 +1,261 @@
+@import "fonts";
+@import "icomoon";
+@import "variables";
+
+// @import '~antd/lib/style/themes/default.less';
+// @import '~antd/dist/antd.less'; // Import Ant Design styles by less entry
+
+html * {
+    font-family: Poppins;
+    outline: none !important;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: $darkPrimaryColor;
+    border-radius: 8px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: lighten($darkPrimaryColor, 10%);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: $appBackgroundColor;
+    overflow: hidden;
+}
+
+h1 {
+	font-size: 32px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+.AppWrapper {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+}
+
+// Overrides
+
+input {
+    font-size: $ml !important;
+}
+
+.ant-form-item-label {
+    label {
+        font-weight: 700;
+    }
+}
+
+.ant-tabs-tab-active {
+    .ant-tabs-tab-btn {
+        font-weight: 700 !important;
+    }
+}
+
+// End of Overrides
+
+.WrapperInput {
+    padding: 20px;
+}
+
+.m10r {
+    margin-right: 10px;
+}
+
+.m10l {
+    margin-left: 10px;
+}
+
+.m10b {
+    margin-bottom: 10px;
+}
+
+.SingleLabel {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 40px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: $ml;
+    font-weight: 700;
+    cursor: default;
+
+    &.__required::before {
+        display: inline-block;
+        margin-right: 4px;
+        color: #ff4d4f;
+        font-size: $ml;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: "*";
+    }
+}
+
+.SEOLink {
+    color: $primaryColor;
+    font-weight: 700;
+}
+
+.LoadingSpinner {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.ModalNotificationContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .ModalNotificationHeader {
+        display: flex;
+        flex-direction: row;
+
+        img {
+            width: 100px;
+            height: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .ModalNotificationTitle {
+        display: block;
+        font-size: $ml;
+        margin-left: 20px;
+    }
+
+    .ModalRecurrenceTitle {
+        display: block;
+        font-size: $l;
+        font-weight: 500;
+    }
+
+    .ModalNotificationButtons {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-top: 30px;
+        width: 100%;
+        gap: 30px;
+
+        span {
+            color: $secondaryColor;
+            cursor: pointer;
+
+            &:hover {
+                color: lighten($secondaryColor, 10%);
+            }
+        }
+    }
+
+    .ModalNotificationClose {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $secondaryColor;
+        color: #fff;
+        width: 120px;
+        height: 40px;
+        border: none;
+        cursor: pointer;
+        // box-shadow: 1px 1px 4px 0px rgba(0, 0, 0, 0.75);
+
+        &:hover {
+            background-color: lighten($secondaryColor, 10%);
+        }
+    }
+}
+
+.GenericTitle {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    border-bottom: 2px solid #d9ddde4d;
+    margin-bottom: 20px;
+	font-size: 28px;
+	font-weight: 600;
+}
+
+.DrawerTitle {
+    margin: 0;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.DrawerFooter {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	width: 100%;
+
+	.DrawerFooterButton {
+		width: 35%;
+		background-color: #FFF;
+		cursor: pointer;
+		border: 1px solid $secondaryColor;
+		border-radius: 30px;
+		height: 40px;
+		color: $secondaryColor;
+		font-weight: 600;
+		transition: 200ms ease-in-out;
+
+		&.--btn-primary {
+			background-color: $secondaryColor;
+			color: #FFF;
+
+			&:hover {
+				background-color: lighten($secondaryColor, 10%);
+			}
+		}
+	}
+}
+
+.InputLabel {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: $ml;
+    font-weight: 700;
+    line-height: 1;
+    cursor: default;
+
+    &.--label-required::after {
+        content: "";
+        display: inline-block;
+        margin-left: 4px;
+        color: #ff4d4f;
+        font-size: $ml;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: "*";
+    }
+}

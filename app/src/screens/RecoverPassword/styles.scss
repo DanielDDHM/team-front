@@ -1,0 +1,114 @@
+@import 'styles/variables';
+
+.RecoverPasswordContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - 312px);
+    padding: 25px;
+
+    .RecoverPasswordContentWrapper {
+        width: 100%;
+
+        @media screen and (min-width: 1600px) {
+            width: 1600px;
+        }
+    }
+}
+
+.RecoverPasswordBox {
+    box-shadow: -1px -1px 55px 0 #33333320, 1px 1px 55px 0 #33333320;
+}
+
+.RecoverPasswordWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 500px;
+    background-image: linear-gradient(#13b4f4 0, #007ff0 100%);
+
+    form {
+        width: 100%;
+    }
+
+    h2 {
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 5px;
+        margin-bottom: 30px;
+        color: #FFFFFF;
+    }
+}
+
+.RecoverPasswordAuthenticationWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    height: 500px;
+}
+
+.RecoverPasswordWelcome {
+    padding: 20px;
+    height: 500px;
+    background-color: #FFFFFF;
+    background-image: linear-gradient(#FFFFFF90, #FFFFFF90), url(../../assets/images/backgrounds/login.jpg);
+    background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.RecoverPasswordInputClass {
+    height: 50px;
+    border-radius: 20px;
+    width: 100%;
+    padding: 0 50px;
+    text-align: center;
+    border: none;
+    margin: 10px 0;
+}
+
+.RecoverPasswordOptions {
+    display: flex;
+    width: 100%;
+    padding: 10px 5px 0;
+    justify-content: space-between;
+}
+
+.RecoverPasswordOptionLink {
+    color: #17445f;
+    cursor: pointer;
+    font-weight: bold;
+
+    &:hover {
+        color: white;
+    }
+}
+
+.RecoverPasswordButtonClass {
+    height: 50px;
+    border-radius: 20px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #17445f;
+    margin-top: 50px;
+    background-color: #17445f;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    color: #FFFFFF;
+
+    &:hover {
+        background-color: #2b556b;
+    }
+
+    &:active {
+        background: #0b2538;
+        border-color: #0b2538;
+        box-shadow: none;
+    }
+}

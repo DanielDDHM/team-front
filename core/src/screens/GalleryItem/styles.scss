@@ -1,0 +1,58 @@
+@import 'styles/variables';
+
+.GalleryItemScreen {
+	.GalleryItem {
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        border: 2px dashed #a6a5a6;
+        border-radius: 4px;
+    
+        &:hover {
+            border-color: #40a9ff;
+
+            .GenericImageUploadOverlay:not(.--visible) {
+                opacity: 1;
+                background-color: #00000080;
+                color: #FFFFFF;
+            }
+        }
+    
+        .GalleryItemImage {
+            height: 100%;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+
+        .GenericImageDelete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: 3px;
+            top: 3px;
+            min-height: 25px;
+            min-width: 25px;
+            border-radius: 50%;
+            background-color: #ddd;
+            border: none;
+            box-shadow: 0 0 4px 2px #00000080;
+            cursor: pointer;
+            transition: 200ms ease-in-out;
+
+            em {
+                font-size: $m;
+            }
+
+            &:hover {
+                color: #40a9ff;
+            }
+        }
+
+		.GenericImageUpload {
+			min-height: 200px;
+		}
+    }
+}

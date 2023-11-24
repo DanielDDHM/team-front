@@ -1,0 +1,108 @@
+@import 'styles/variables';
+
+.HeaderContainer {
+	z-index: 10;
+	background: #F4F5F5;
+	border-radius: $containerBorderRadius;
+	padding: 0px 25px;
+}
+
+.Header {
+	width: 100%;
+	display: flex;
+    justify-content: flex-end;
+    align-items: center;
+	height: $headerHeight;
+	min-height: $headerHeight;
+	position: relative;
+}
+
+.HeaderUserMenu {
+	display: flex;
+	align-items: center;
+	height: 40px;
+
+	&:hover {
+		color: $primaryColor;
+		background-color: transparent !important;
+	}
+}
+
+.HeaderUserMenuIcon {
+	font-size: $l;
+	margin-right: 10px;
+}
+
+.HeaderUserContainer {
+	display: flex;
+	align-items: center;
+	height: 40px;
+	cursor: pointer;
+
+	.HeaderUserAvatar {
+		height: 40px;
+		width: 40px;
+		border-radius: 20px;
+		overflow: hidden;
+		margin-right: 10px;
+
+		img {
+			height: 40px;
+			object-fit: contain;
+			object-position: center center;
+		}
+	}
+}
+
+.HeaderOptions {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+
+	.HeaderLanguagePicker {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 10px;
+		border: 1px solid #d1d1d1;
+		border-radius: 25px;
+		height: 32px;
+		padding: 0 10px;
+		width: 125px;
+		cursor: pointer;
+	
+		p {
+			display: flex;
+			justify-content: center;
+			text-align: center;
+			flex: 1;
+			margin: 0;
+		}
+	}
+
+	.HeaderIcon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+	}
+}
+
+
+@keyframes show {
+	0% {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+	100% { opacity: 1 }
+}
+
+@keyframes hide {
+	0% { opacity: 1 }
+	100% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}

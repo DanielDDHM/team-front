@@ -1,0 +1,206 @@
+@import "styles/variables";
+
+.SidebarContainer {
+    position: relative;
+    width: 315px;
+    min-width: 315px;
+    height: 100%;
+    max-height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: $sidebarPrimaryColor;
+    transition: 0.5s;
+    border-radius: $containerBorderRadius;
+    padding: 0 20px 10px;
+    z-index: 15;
+
+    * {
+        font-family: Poppins;
+        font-weight: 400;
+        color: $sidebarTextColor;
+    }
+
+    .SidebarHome {
+        margin-bottom: 10px;
+
+        .SidebarLogoContainer {
+            display: flex;
+            align-items: center;
+            height: 60px;
+            padding-left: 5px;
+
+            .Logo {
+                height: 30px;
+                width: auto;
+                object-fit: contain;
+                // animation: rotate linear 2s infinite;
+            }
+        }
+    }
+
+    .UserContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 50px 0;
+
+        img {
+            width: 90px;
+            min-width: 90px;
+            height: 90px;
+            min-height: 90px;
+            object-fit: cover;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .UserDetails {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            p {
+                margin: 0;
+                font-size: 18px;
+                text-align: center;
+            }
+        }
+    }
+
+    .SidebarSeparator {
+        width: 100%;
+        height: 1px;
+        margin: 1px 0 10px;
+        background-color: #d9ddde4d;
+    }
+
+    .SidebarContent {
+        height: calc(100% - 270px);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        .SidebarMenus {
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            overflow-x: hidden;
+            flex: 1;
+
+            .SidebarMenuObject {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 0 40px;
+                width: 100%;
+                height: 55px;
+                min-height: 55px;
+                margin-bottom: 6px;
+                user-select: none;
+                transition: 0.5s;
+                border-radius: 8px;
+                cursor: pointer;
+
+                span.SidebarMenuIcon {
+                    display: flex;
+                    justify-content: center;
+                    width: 25px;
+                }
+
+                p {
+                    line-height: 1;
+                    margin: 0;
+                    font-size: 18px;
+                }
+
+				&.--menu-active {
+					p {
+						font-weight: 700;
+					}
+				}
+            }
+        }
+
+        .SidebarLogo {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+
+            img {
+                height: 81px;
+                width: 92px;
+            }
+        }
+
+        .SidebarLegalLinks {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            margin: 20px 0 10px;
+
+            a {
+                &:hover {
+                    color: $sidebarTextColor;
+                }
+            }
+        }
+    }
+
+    &.closed {
+        width: 90px;
+        min-width: 90px;
+        padding: 0 20px 10px;
+        margin-left: -90px;
+
+        .SidebarSeparator {
+            width: 100%;
+        }
+
+        .SidebarMenu {
+            .SidebarNavName,
+            .SidebarSubNavName {
+                opacity: 0 !important;
+                transform: translate3d(-25px, 0, 0) !important;
+            }
+
+            &.isSubMenu {
+                .SidebarMenuIcon {
+                    opacity: 1 !important;
+                }
+            }
+        }
+
+        .MenuHasOptions {
+            display: none;
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid\9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    transition: linear 0.2s;
+
+    &.__opened {
+        transform: rotate(180deg);
+    }
+}

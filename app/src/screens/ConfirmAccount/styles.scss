@@ -1,0 +1,23 @@
+@import 'styles/variables';
+
+.ConfirmAccountContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: calc(100vh - $footerHeight);
+    background-color: #e5e5e5;
+    padding: 25px;
+
+    .ConfirmAccountContentWrapper {
+        width: 100%;
+
+        @media screen and (min-width: 1100px) {
+            width: 1100px;
+        }
+    }
+
+	form {
+		margin-top: 50px;
+	}
+}
